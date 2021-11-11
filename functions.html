@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Functions</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div style="text-align: center;">
+        <h1>Click</h1>
+        <p>Click the button to see what the '.click' function does!</p>
+        <button class="click">Click</button>
+    </div>
+    <div style="text-align: center;">
+        <h1>Hide</h1>
+        <p>Click the button to see what the '.hide' function does!</p>
+        <button class="hide">Hide</button>
+    </div>
+    <div style="text-align: center;">
+        <h1>Show</h1>
+        <p>Click the button to see what the '.show' function does to Hide!</p>
+        <button class="show">Show</button>
+    </div>
+    <div style="text-align: center;">
+        <h1>Toggle</h1>
+        <p>Click the button to see what the '.toggle' function does to Hide!</p>
+        <button class="toggle">Toggle</button>
+    </div>
+    <div style="text-align: center;">
+        <h1>slideDown</h1>
+        <p>Click the button to see what the '.slidedown' function does!</p>
+        <p class="hidden" hidden>I was hiding</p>
+        <button class="slideDown">slideDown</button>
+    </div>
+    <div style="text-align: center;">
+        <h1>slideUp</h1>
+        <p>Click the button to see what the '.slideup' function does!</p>
+        <p id="slideUp">Bye</p>
+        <button class="slideUp">slideUp</button>
+    </div>
+    <div style="text-align: center;">
+        <h1>slideToggle</h1>
+        <p>Click the button to see what the '.slidetoggle' function does!</p>
+        <p id="slideToggle">I am slide toggled</p>
+        <button class="slideToggle">slideToggle</button>
+    </div>
+    <div style="text-align: center;">
+        <h1>fadeIn</h1>
+        <p>Click the button to see what the '.fadein' function does!</p>
+        <p id="fadeIn" hidden>I fade in</p>
+        <button class="fadeIn">fadeIn</button>
+    </div>
+    <div style="text-align: center;">
+        <h1>fadeOut</h1>
+        <p>Click the button to see what the '.fadeout' function does!</p>
+        <p id="fadeOut">I fade out</p>
+        <button class="fadeOut">fadeOut</button>
+    </div>
+    <div style="text-align: center;">
+        <h1>addClass</h1>
+        <p>Click the button to see what the '.addclass' function does!</p>
+        <p id="addClass">My text will turn green</p>
+        <button class="addClass">addClass</button>
+    </div>
+    <div style="text-align: center;">
+        <h1>Before</h1>
+        <p>Click the button to see what the '.before' function does!</p>
+        <p id="before">An h1 tag will be added before me</p>
+        <button class="before">Before</button>
+    </div>
+    <div style="text-align: center;">
+        <h1>After</h1>
+        <p>Click the button to see what the '.after' function does!</p>
+        <p id="after">An h1 tag will be added after me</p>
+        <button class="after">After</button>
+    </div>
+    <div style="text-align: center;">
+        <h1>Append</h1>
+        <p>Click the button to see what the '.append' function does!</p>
+        <p id="append">I'm a p tag</p>
+        <button class="append">Append</button>
+    </div>
+    <div style="text-align: center;">
+        <h1>HTML</h1>
+        <p>Click the button to see what the '.html' function does!</p>
+        <div id="html">I'm a div<p>I'm a p tag in the div</p></div>
+        <button class="html">HTML</button>
+    </div>
+    <div style="text-align: center;">
+        <h1>Attr</h1>
+        <p>Click the button to see what the '.attr' function does!</p>
+        <p class="green" id="attr">I'm a p tag with the class of green. Class=</p>
+		<button class="attr">Click to retreive the class</button>
+		<button class="attr2">Click to change the class attribute to black</button>
+    </div>
+    <div style="text-align: center;">
+        <h1>Val</h1>
+        <p>Click the button to see what the '.val' function does!</p>
+        <input type="text" name="name" id="val">
+		<button class="val">Click to retreive the value of the input. Look in your console</button>
+		<button class="val2">Click to change the value of the input to "hi"</button>
+    </div>
+    <div style="text-align: center;">
+        <h1>Text</h1>
+        <p>Click the button to see what the '.text' function does!</p>
+        <p id="text">My text will be replaced</p>
+        <button class="text">Text</button>
+    </div>
+</body>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.click').click(function(){
+            alert('Hello')
+        })
+        })
+        $('.hide').click(function(){
+            $(".hide").hide()
+        })
+        $('.show').click(function(){
+            $('.hide').show()
+        })
+        $('.toggle').click(function(){
+            $('.hide').toggle()
+        })
+        $('.slideDown').click(function(){
+            $('.hidden').slideDown()
+        })
+        $('.slideUp').click(function(){
+            $("#slideUp").slideUp()
+        })
+        $('.slideToggle').click(function(){
+            $("#slideToggle").slideToggle()
+        })
+        $('.fadeIn').click(function(){
+            $("#fadeIn").fadeIn()
+        })
+        $('.fadeOut').click(function(){
+            $("#fadeOut").fadeOut()
+        })
+        $('.addClass').click(function(){
+            $("#addClass").addClass("green")
+        })
+        $('.before').click(function(){
+            $("#before").before("<h1>Coding</h1>")
+        })
+        $('.after').click(function(){
+            $("#after").after("<h1>Dojo</h1>")
+        })
+        $('.append').click(function(){
+            $("#append").append("<span> I'm a span tag</span>")
+        })
+        $('.html').click(function(){
+            $("#html").html("<h1>Surprise</h1>")
+        })
+        $('.attr').click(function(){
+            var classVal = $("#attr").attr("class")
+            $('#attr').append(classVal)
+        })
+        $('.attr2').click(function(){
+            $("#attr").attr("class", "black")
+        })
+        $('.val').click(function(){
+            console.log($("#val").val())
+        })
+        $('.val2').click(function(){
+            $('#val').val("hi")
+        })
+        $('.text').click(function(){
+            $("#text").text("hello")
+        })
+    </script>
+    <style type="text/css">
+        .green {
+            color:green;
+        }
+    </style>
+</html>
